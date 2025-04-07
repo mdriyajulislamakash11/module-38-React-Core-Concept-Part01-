@@ -4,6 +4,11 @@ function App() {
   return (
     <>
       <h1>Vite + React</h1>
+      <Device name="leptop" price="28530"></Device>
+      <Students name="akash" age="23" proff="developer" address="dhaka"></Students>
+      <Device name="mobile" price="17000"></Device>
+      <Students></Students>
+      <Device name="watch" price="1000"></Device>
       <Product></Product>
       <Person></Person>
       <PropExplore />
@@ -43,6 +48,7 @@ function Person() {
 
 // 38-4 Explore JSX and Props basics
 
+// JSX
 function PropExplore (){
 
   const developer = {
@@ -56,6 +62,30 @@ function PropExplore (){
     <div style={developer}>
       <h2 style={developer}>Lorem, ipsum.</h2>
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa autem et, impedit dolorem voluptatibus doloribus magni possimus. Minima placeat cupiditate, ullam commodi et deserunt ducimus pariatur cum nostrum molestias animi.</p>
+    </div>
+  )
+}
+
+// props
+function Device(props) {
+  console.log(props)
+  return(
+    <div className="box">
+      <p>This Device is: {props.name},  price: {props.price}</p>
+    </div>
+  )
+};
+
+function Students(props) {
+  const {name, age, proff, address} = props;
+
+  return(
+    <div className="box">
+      <h3>This is Students</h3>
+      <p>name: {name}</p>
+      <p>age: {age}</p>
+      <p>proffesion: {proff}</p>
+      <p>address: {address}</p>
     </div>
   )
 }
