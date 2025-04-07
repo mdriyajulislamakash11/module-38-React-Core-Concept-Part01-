@@ -13,12 +13,13 @@ import React from 'react'
     // }
 
 // conditional rendering option 2
-    if(isDone ===true){
-        return <li>Finish: {task}</li>
-    }
-    return  <li>worl on: {task}</li>
+    // if(isDone ===true){
+    //     return <li>Finish: {task}</li>
+    // }
+    // return  <li>worl on: {task}</li>
 
-
+// conditional rendering option 3
+return <li>{isDone ? "Finished" : "Work On"} : {task}</li>
 
 }
 
