@@ -1,14 +1,42 @@
 import "./App.css";
+import Actor from "./components/Actor";
+import Singer from "./components/Singer";
 import Todo from "./components/toDo";
 
 function App() {
+
+  const frnd = ["asta", "vasta", "casta", "halim", "daal"];
+
+  const singer = [
+    {name: "dalim kumar", age: 22},
+    {name: "vutka kumar", age: 22},
+    {name: "potol kumar", age: 22},
+    {name: "putul kumar", age: 22},
+    {name: "alu kumar", age: 22},
+  ]
+    
+  
+
   return (
     <>
       <h1>Vite + React</h1>
 
-      <Todo task="learn react" isDone={true}></Todo>
+
+      {
+        singer.map((sing) => <Singer singer={sing}></Singer>)
+      }
+
+
+      <Actor name={"Akash"}></Actor>
+
+      {
+        frnd.map((f) => <Actor name={f} />)
+      }
+   
+      {/* <Todo task="learn react" isDone={true}></Todo>
       <Todo task="Explore React" isDone={false}></Todo>
-      <Todo task="Try JSX" isDone={true}></Todo>
+      <Todo task="Try JSX" isDone={true}></Todo> */}
+
       {/* <Device name="leptop" price="28530"></Device>
       <Students name="akash" age="23" proff="developer" address="dhaka"></Students>
       <Device name="mobile" price="17000"></Device>
